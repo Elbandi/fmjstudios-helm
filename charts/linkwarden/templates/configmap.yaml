@@ -73,7 +73,7 @@ data:
   {{- if $v.customName }}
   {{ include "linkwarden.auth.envs.customName" $providerArg }}: {{ $v.customName }}
   {{- end }}
-  {{- if has $issuer $issuerList }}
+  {{- if has $provider $issuerList }}
   {{- if $v.issuer }}
   {{ include "linkwarden.auth.envs.issuer" $providerArg }}: {{ $issuer }}
   {{- end }}
