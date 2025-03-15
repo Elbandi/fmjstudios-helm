@@ -19,4 +19,7 @@ spec:
   resources:
     requests:
       storage: {{ .Values.linkwarden.data.filesystem.pvc.size }}
+  {{- if .Values.linkwarden.data.filesystem.pvc.volumeName }}
+  volumeName: {{ .Values.linkwarden.data.filesystem.pvc.volumeName }}
+  {{- end }}
 {{- end }}

@@ -129,6 +129,9 @@ linkwarden:
         ## @param linkwarden.data.filesystem.pvc.reclaimPolicy [default: Retain] The resourcePolicy given to PVCs
         ##
         reclaimPolicy: Retain
+        ## @param linkwarden.data.filesystem.pvc.volumeName [string] The volumeName given to PVCs
+        ##
+        volumeName: ""
         ## @param linkwarden.data.filesystem.pvc.existingClaim [string] Provide the name to an existing PVC
         ##
         existingClaim: ""
