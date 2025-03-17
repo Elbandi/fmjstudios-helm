@@ -78,7 +78,7 @@ spec:
             {{- end }}
             {{/* Authentication settings */}}
             {{- range $_, $v := .Values.linkwarden.auth.sso -}}
-            {{- $providerArg := (dict "provider" $v.provider) -}}
+            {{- $providerArg := (dict "provider" $v.provider) }}
             - name: {{ include "linkwarden.auth.envs.clientId" $providerArg }}
               valueFrom:
                 secretKeyRef:
